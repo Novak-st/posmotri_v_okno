@@ -52,23 +52,30 @@ ol {
 .content {
   display: flex;
   align-items: center;
+  margin: 0 auto;
   gap: 30px;
 }
 
 /*result ----------------------------------------------------*/
 
 .result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   align-self: flex-end;
 }
 
 .result__video {
   inline-size: 100%;
   block-size: 100%;
+  object-fit: cover;
+  object-position: cover;
 }
 
 .result__video-container {
-  inline-size: 711px;
-  margin: 0 0 16px;
+  position: relative;
+  width: 711px;
+  height: 386px;
 }
 
 /*search ----------------------------------------------------*/
@@ -91,10 +98,10 @@ ol {
 }
 
 .search-form__textfield {
-  border-top: 1px solid #FFF;
+  border-top: 1px solid currentColor ;
   border-right: none;
   border-left: none;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid currentColor;
   color: currentColor;
   font-family: inherit;
   font-weight: inherit;
@@ -105,11 +112,6 @@ ol {
 
 .search-form__textfield:focus {
   outline: none;
-}
-
-.search-form__textfield:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .search-form__textfield:active {
@@ -156,7 +158,7 @@ ol {
 }
 
 .button {
-  border: 1px solid #FFF;
+  border: 1px solid currentColor;
   padding: 6px;
   color: #FFF;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -192,11 +194,12 @@ ol {
 /*details ----------------------------------------------------*/
 
 .content__details {
-  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
 }
 
 .title {
-  padding: 0 0 26px;
   color: #FFF;
   font-family: Oswald, sans-serif;
   font-weight: 700;
@@ -211,10 +214,15 @@ ol {
 
 .content__list {
   position: relative;
-  overflow-y: scroll;
-  block-size: 298px;
-  scrollbar-width: none;
+  overflow-y: auto;
+  height: 300px;
 }
+
+.cards-list-item-template {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .content__list-item:not(:last-child) {
   margin: 0 0 34px;
@@ -255,11 +263,16 @@ ol {
 
 .content__video-card-title {
   color: #FFF;
-  font-family: 'Oswald';
+  font-family: Oswald, sans-serif;
+  max-width: 199px;   /*при 200px не скрывается*/
   font-size: 30px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 
 .content__video-card-description {
   color: #FFF;
@@ -267,7 +280,11 @@ ol {
   line-height: 16.2px;
 }
 
+
+
 .content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+  inline-size: 194px;
+  block-size: 103px;
+  object-fit: cover;
+  object-position: center;
 }
