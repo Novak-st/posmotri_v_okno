@@ -263,7 +263,7 @@ ol {
 .content__video-card-title {
   color: #FFF;
   font-family: Oswald, sans-serif;
-  max-width: 199px;   /*при 200px не скрывается*/
+  max-width: 199px;   /*при 200px многоточие не появляется*/
   font-size: 30px;
   text-overflow: ellipsis; 
   white-space: nowrap; 
