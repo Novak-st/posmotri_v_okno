@@ -223,7 +223,6 @@ ol {
   flex-direction: column;
 }
 
-
 .content__list-item:not(:last-child) {
   margin: 0 0 34px;
 }
@@ -273,14 +272,11 @@ ol {
   text-transform: uppercase;
 }
 
-
 .content__video-card-description {
   color: #FFF;
   font-weight: 400;
   line-height: 16.2px;
 }
-
-
 
 .content__video-card-thumbnail {
   inline-size: 194px;
