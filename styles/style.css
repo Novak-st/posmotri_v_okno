@@ -50,7 +50,7 @@ ol {
 }
 
 .content {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin: 0 auto;
   gap: 30px;
@@ -69,7 +69,7 @@ ol {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
-  object-position: cover;
+  object-position: center;
 }
 
 .result__video-container {
@@ -197,6 +197,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 21px;
+  width: 400px;
 }
 
 .title {
@@ -276,6 +277,10 @@ ol {
   color: #FFF;
   font-weight: 400;
   line-height: 16.2px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-thumbnail {
